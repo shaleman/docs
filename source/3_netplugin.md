@@ -8,12 +8,14 @@ Netplugin is designed to be used with docker containers and with cluster schedul
 ## Getting started
 This section will walk you through how to try netplugin in a vagrant environment
 ### Prerequisits
+- Baremetal Linux server with Ubuntu 15.04 or Centos 7.1 OR Mac OS X 10.9 or higher
 - VirtualBox 5.0.2 or greater
 - Vagrant 1.7.4
 - Go 1.5.0
 
 ### Quick start guide
-Clone the repo and bring up the VMs
+
+### Step 0: Clone the repo and bring up the VMs
 ```
 $ git clone https://github.com/contiv/netplugin
 $ cd netplugin; make demo
@@ -26,7 +28,7 @@ This brings up a cluster of two VMs running docker and netplugin
 netplugin-node1$ netctl net create contiv-net --subnet=20.1.1.0/24 --gateway=20.1.1.254 --pkt-tag=200
 ```
 
-#### Step 2: Run containers on two hosts
+#### Step 2: Run containers on two nodes
 On node1
 ```
 netplugin-node1$ docker run -itd --name=web --net=contiv-net ubuntu /bin/bash
@@ -172,7 +174,5 @@ When a container is attached to an endpoint group, it automatically becomes reac
 ## Multi tenancy
 
 ## Using Netplugin on baremetal servers
-
-## Using Netplugin with Kubernetes
 
 ## Working with Cisco ACI
