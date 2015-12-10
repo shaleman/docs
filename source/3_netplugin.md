@@ -15,7 +15,7 @@ This section will walk you through how to try netplugin in a vagrant environment
 
 ### Quick start guide
 
-### Step 0: Clone the repo and bring up the VMs
+#### Step 0: Clone the repo and bring up the VMs
 ```
 $ git clone https://github.com/contiv/netplugin
 $ cd netplugin; make demo
